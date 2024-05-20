@@ -128,7 +128,7 @@ ul,
 li {
 	padding: 0;
 	margin: 0;
-	list-style: none;
+	/* list-style: none; */
 }
 
 header,
@@ -389,7 +389,7 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-	color: #aaa !important;
+	color: #aaa;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -1682,14 +1682,14 @@ Products Page
 .page-heading {
 	/* margin-top: 160px; */
 	margin-bottom: 30px;
-	background-image: url(../images/products-page-heading.jpg);
+	background-image: url(../bg/bg.jpeg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .page-heading .inner-content {
-	padding: 150px 0px;
+	padding: 100px 0px;
 	text-align: center;
 }
 
@@ -1701,6 +1701,33 @@ Products Page
 }
 
 .page-heading .inner-content span {
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	font-style: italic;
+}
+.page-heading2 {
+	/* margin-top: 160px; */
+	margin-bottom: 30px;
+	background-image: url(../bg/bgThree.jpeg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-heading2 .inner-content {
+	padding: 100px 0px;
+	text-align: center;
+}
+
+.page-heading2 .inner-content h2 {
+	font-size: 52px;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.page-heading2 .inner-content span {
 	font-size: 16px;
 	font-weight: 500;
 	color: #fff;
@@ -2062,7 +2089,7 @@ About Us Page
 .about-page-heading {
 	/* margin-top: 160px; */
 	margin-bottom: 30px;
-	background-image: url(../images/about-us-page-heading.jpg);
+	background-image: url(../bg/bgTwo.jpeg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;

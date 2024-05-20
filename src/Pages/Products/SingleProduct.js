@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import userContext from '../../features/Context/Context';
 import CommonCarousel from '../../components/Common Carousel/CommonCarousel';
 import { ClockLoader } from 'react-spinners';
-
+import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 // import prodImg2 from '../../assets/images/Slider/CardOne2.JPG';
 const description =
 	'Details to details is what makes GetTrendy different from the other themes.';
@@ -60,9 +60,11 @@ const SingleProduct = () => {
 							<div class='row'>
 								<div class='col-lg-12'>
 									<div class='inner-content'>
-										<h2>Single Product Page</h2>
+										<h2>Product Details</h2>
 										<span>
-											Awesome &amp; Creative HTML CSS layout by TemplateMo
+											Discover the finest collection of premium fabrics, crafted
+											to inspire your next masterpiece with unparalleled quality
+											and elegance.
 										</span>
 									</div>
 								</div>
@@ -72,7 +74,7 @@ const SingleProduct = () => {
 					<section class='section' id='product'>
 						<div class='container'>
 							<div class='row'>
-								<div class='col-lg-8'>
+								<div class='col-lg-7'>
 									<div class='left-images'>
 										<img
 											src={productDetails?.image?.url}
@@ -83,12 +85,24 @@ const SingleProduct = () => {
 										{/* <img src={prodImg2} alt='' /> */}
 									</div>
 								</div>
-								<div class='col-lg-4'>
+								<div class='col-lg-5'>
 									<div class='right-content'>
 										<h4>{productDetails?.name}</h4>
 										<span class='price'>
 											{productDetails?.price.formatted_with_code} per meter
 										</span>
+										<div
+											className='price d-flex'
+											style={{ borderBottom: '1px solid #eee' }}>
+											<div>
+												<p className=' text-success'>Availability : {''}</p>
+											</div>
+											<div>
+												<span class='ms-2'>
+													{''} {productDetails?.sku} in stock
+												</span>
+											</div>
+										</div>
 
 										<span> Product Description</span>
 										<div class='quote'>
@@ -100,6 +114,7 @@ const SingleProduct = () => {
 												}}
 											/>
 										</div>
+
 										<div class='quantity-content'>
 											<div class='left-content'>
 												<h6>Quantity:</h6>
@@ -148,6 +163,81 @@ const SingleProduct = () => {
 													Add To Cart
 												</button>
 											</div>
+										</div>
+										<div class='quantity-content' style={{ paddingTop: 0 }}>
+											<MDBAccordion flush initialActive={1}>
+												<MDBAccordionItem
+													collapseId={1}
+													headerTitle='Shipping & Return Policy'>
+													<span
+														style={{
+															fontWeight: '700',
+															color: 'black',
+															marginTop: 0,
+														}}>
+														Return Policy:
+													</span>
+													<br />
+													Our fabrics are put through a rigorous 30-step quality
+													check throughout the entire production process. From
+													the lining of the threads to the beading of the
+													embroidery - everything is looked into with a keen eye
+													and cleared for packaging and shipping. Due to these
+													strict measures, our production quality is
+													unparalleled. Owing to the nature of the trade, once a
+													fabric has been cut out and delivered it cannot be
+													returned to us as it's been cut per your individual
+													requirement and order quantity, which varies from
+													order to order.
+													<span
+														className='mt-3'
+														style={{
+															fontWeight: '700',
+															color: 'black',
+															marginTop: 0,
+														}}>
+														Shipping Policy:
+													</span>
+													<br />
+													<ul style={{ paddingLeft: '0' }}>
+														<li>
+															We ship across India. For international
+															deliveries, please contact us.
+														</li>
+														<li>
+															Orders are shipped within 24-48 hours of being
+															confirmed. All orders are shipped by FedEx,
+															Delhivery or Bluedart.
+														</li>
+														<li>
+															It takes approximately 3 - 5 business days to
+															deliver your product. Sometimes delivery may take
+															longer due to bad weather, flight/transportation
+															delays, political disruptions and/or other
+															unforeseen circumstances.
+														</li>
+													</ul>
+												</MDBAccordionItem>
+												<MDBAccordionItem
+													collapseId={2}
+													headerTitle='Washing Instruction'>
+													Dry Wash only
+												</MDBAccordionItem>
+												<MDBAccordionItem
+													collapseId={3}
+													headerTitle='Disclaimer'>
+													Product specifications are a close approximate in
+													value. Expect a slight variation in colour. There will
+													always be a minor variation in the colour you see on
+													your computer screen/phone display and the one that is
+													received on the fabric since the technologies involved
+													for display and printing are different. A customer
+													must place an order keeping this slight colour
+													variation in mind. Please note - no returns shall be
+													accepted on the basis of colour and description
+													discrepancy.
+												</MDBAccordionItem>
+											</MDBAccordion>
 										</div>
 									</div>
 								</div>

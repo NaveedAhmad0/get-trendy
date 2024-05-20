@@ -9,7 +9,7 @@ const CommonCarousel = ({ filteredData, title, description }) => {
 			<div className='section' id='men'>
 				<div
 					className='container-fluid text-left'
-					style={{ padding: '0px 90px' }}>
+					style={{ padding: '0px 38px' }}>
 					<div className='row text-left'>
 						<div className='section-heading'>
 							<h2>{title}</h2>

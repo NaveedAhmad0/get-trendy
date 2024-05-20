@@ -11,8 +11,8 @@ const AboutUs = () => {
 					<div class='row'>
 						<div class='col-lg-12'>
 							<div class='inner-content'>
-								<h2>About Our Company</h2>
-								<span>Awesome, clean &amp; creative HTML5 Template</span>
+								<h2>About Our Brand</h2>
+								<span>Wrap yourself in creativity with our fabrics</span>
 							</div>
 						</div>
 					</div>
@@ -28,46 +28,30 @@ const AboutUs = () => {
 						</div>
 						<div class='col-lg-6'>
 							<div class='right-content'>
-								<h4>About Us &amp; Our Skills</h4>
+								<h4>About Us </h4>
 								<span>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod kon tempor incididunt ut labore.
+									We understand the challenges of the perfect fabric material
+									online shopping for your wardrobe update. It can be
+									frustrating to search through physical stores and be
+									disappointed by expensive options.
 								</span>
 								<div class='quote'>
 									<i class='fa fa-quote-left'></i>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiuski smod kon tempor incididunt ut labore.
+										At The House of Textiles, we are dedicated to simplifying
+										your online shopping experience and helping you discover
+										affordable fabrics that suit your needs.
 									</p>
 								</div>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod kon tempor incididunt ut labore et dolore magna
-									aliqua ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip.
+									Our extensive collection features the finest fabrics sourced
+									directly from local artisans. Whether you're looking for
+									casual, formal, or wedding wear, we have it all conveniently
+									available online. From everyday attire to exquisite haute
+									couture shows, we offer a wide range of high-quality
+									materials. You can access a diverse selection of fabrics
+									without leaving the comfort of your home.
 								</p>
-								<ul>
-									<li>
-										<a href='#/'>
-											<i class='fa fa-facebook'></i>
-										</a>
-									</li>
-									<li>
-										<a href='#/'>
-											<i class='fa fa-twitter'></i>
-										</a>
-									</li>
-									<li>
-										<a href='#/'>
-											<i class='fa fa-linkedin'></i>
-										</a>
-									</li>
-									<li>
-										<a href='#/'>
-											<i class='fa fa-behance'></i>
-										</a>
-									</li>
-								</ul>
 							</div>
 						</div>
 					</div>

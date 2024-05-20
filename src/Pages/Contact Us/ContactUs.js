@@ -10,7 +10,7 @@ const ContactUs = () => {
 						<div class='col-lg-12'>
 							<div class='inner-content'>
 								<h2>Contact Us</h2>
-								<span>Awesome, clean &amp; creative HTML5 Template</span>
+								<span>Got a question? Ask us anytime!</span>
 							</div>
 						</div>
 					</div>
@@ -22,12 +22,14 @@ const ContactUs = () => {
 						<div class='col-lg-6'>
 							<div id='map'>
 								<iframe
-									src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90186.37207676383!2d-80.13495239500924!3d25.9317678710111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ad1877e4a82d%3A0xa891714787d1fb5e!2sPier%20Park!5e1!3m2!1sen!2sth!4v1637512439384!5m2!1sen!2sth'
+									src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.6654904722973!2d74.83186731513576!3d31.63430648134264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39197c12178f2397%3A0xd052584d8ef7f666!2sGuru%20Nanak%20Dev%20University!5e0!3m2!1sen!2sin!4v1620318519402!5m2!1sen!2sin'
 									width='100%'
 									height='400px'
 									frameborder='0'
 									style={{ border: 0 }}
-									allowfullscreen></iframe>
+									allowfullscreen=''
+									aria-hidden='false'
+									tabindex='0'></iframe>
 							</div>
 						</div>
 						<div class='col-lg-6'>
@@ -141,11 +143,6 @@ const ContactUs = () => {
 								<div class='col-6'>
 									<ul>
 										<li>
-											Store Location:
-											<br />
-											<span>Sunny Isles Beach, FL 33160, United States</span>
-										</li>
-										<li>
 											Phone:
 											<br />
 											<span>010-020-0340</span>
@@ -153,21 +150,16 @@ const ContactUs = () => {
 										<li>
 											Office Location:
 											<br />
-											<span>North Miami Beach</span>
+											<span>Amritsar</span>
 										</li>
 									</ul>
 								</div>
 								<div class='col-6'>
 									<ul>
 										<li>
-											Work Hours:
-											<br />
-											<span>07:30 AM - 9:30 PM Daily</span>
-										</li>
-										<li>
 											Email:
 											<br />
-											<span>info@company.com</span>
+											<span>shaziasadaf18@gmail.com</span>
 										</li>
 										<li>
 											Social Media:

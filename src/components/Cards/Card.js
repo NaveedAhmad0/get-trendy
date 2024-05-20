@@ -110,7 +110,7 @@ const Card = () => {
 											src={card.img}
 											className='card-img-top rounded-0 border-0'
 											alt='...'
-											style={{ height: '17rem' }}
+											style={{ width: '294px', height: '272px' }}
 										/>
 									))}
 								</Carousel>

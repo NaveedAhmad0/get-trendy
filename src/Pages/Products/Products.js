@@ -3,8 +3,10 @@ import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import userContext from '../../features/Context/Context';
 import { Link, useLocation } from 'react-router-dom';
 import { ClockLoader } from 'react-spinners';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Products = () => {
+	AOS.init();
 	const { fetchAllProd, data } = useContext(userContext);
 
 	const location = useLocation();
@@ -82,9 +84,10 @@ const Products = () => {
 							<div class='row'>
 								<div class='col-lg-12'>
 									<div class='inner-content'>
-										<h2>Check Our Products</h2>
+										<h2>Check Our Fabrics</h2>
 										<span>
-											Awesome &amp; Creative HTML CSS layout by TemplateMo
+											Purchase the ideal fabric collection to enhance your
+											wardrobe
 										</span>
 									</div>
 								</div>
@@ -105,9 +108,12 @@ const Products = () => {
 						<div class='container'>
 							<div class='row'>
 								{currentProducts?.map((product, index) => (
-									<div class='col-lg-4' key={index}>
+									<div class='col-lg-3' key={index}>
 										<div class='item'>
-											<div class='thumb'>
+											<div
+												class='thumb'
+												data-aos='fade-up'
+												data-aos-anchor-placement='bottom-bottom'>
 												<div class='hover-content'>
 													<ul>
 														<li>
@@ -128,7 +134,7 @@ const Products = () => {
 												<img
 													src={product?.image?.url}
 													width={300}
-													height={390}
+													height={340}
 													alt=''
 												/>
 											</div>

@@ -3,8 +3,13 @@ import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import userContext from '../../features/Context/Context';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { ClockLoader } from 'react-spinners';
-
+import { Descriptions } from './Description';
+import './category.css';
+// import Typewriter from 'typewriter-effect';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const CategoryProducts = () => {
+	AOS.init();
 	const { fetchProdByCategory, dataByCategory, toggleData } =
 		useContext(userContext);
 
@@ -80,6 +85,44 @@ const CategoryProducts = () => {
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
+	const textType =
+		id === 'chiffon'
+			? Descriptions.CHIFFON
+			: id === 'silk'
+			? Descriptions.SILK
+			: id === 'cotton'
+			? Descriptions.COTTON
+			: id === 'organza'
+			? Descriptions.ORGANZA
+			: id === 'nylon'
+			? Descriptions.NYLON
+			: id === 'linen'
+			? Descriptions.LINEN
+			: id === 'polyster'
+			? Descriptions.POLYESTER
+			: id === 'lycra'
+			? Descriptions.LYCRA
+			: id === 'velvet' && Descriptions.VELVET;
+
+	let str =
+		id === 'chiffon'
+			? Descriptions.CHIFFON_PROS
+			: id === 'silk'
+			? Descriptions.SILK_PROS
+			: id === 'cotton'
+			? Descriptions.COTTON_PROS
+			: id === 'organza'
+			? Descriptions.ORGANZA_PROS
+			: id === 'nylon'
+			? Descriptions.NYLON_PROS
+			: id === 'linen'
+			? Descriptions.LINEN_PROS
+			: id === 'polyster'
+			? Descriptions.POLYESTER_PROS
+			: id === 'lycra'
+			? Descriptions.LYCRA_PROS
+			: id === 'velvet' && Descriptions.VELVET_PROS;
+	let result = str.split(',');
 	return (
 		<>
 			{!toggleData ? (
@@ -90,18 +133,52 @@ const CategoryProducts = () => {
 				</div>
 			) : (
 				<div>
-					<div class='page-heading' id='top'>
+					<div class='page-heading2' id='top'>
 						<div class='container'>
 							<div class='row'>
 								<div class='col-lg-12'>
 									<div class='inner-content'>
-										<h2>{capitalizeFirstLetter(id)} Products</h2>
-										{/* <span>
-											Awesome &amp; Creative HTML CSS layout by TemplateMo
-										</span> */}
+										{/* <h2>{capitalizeFirstLetter(id)} Products</h2> */}
+										<h2>{id.toUpperCase()} FABRIC</h2>
+										<span
+											// className='typewriter'
+											data-aos='fade-up'
+											data-aos-anchor-placement='top-bottom'>
+											{textType}
+											{/* <Typewriter
+											onInit={(typewriter) => {
+												typewriter
+													.typeString(textType)
+													.pauseFor(1000)
+													.deleteAll()
+													.typeString(textType)
+													.start();
+											}}
+										/> */}
+										</span>
+										<br />
+										<div className='row mt-5 '>
+											{/* {result.map((text, index) => (
+												<div
+													class='text-white col-lg-3 text-left'
+													data-aos='fade-up'
+													data-aos-delay='350'>
+													<span className='text-left' key={index}>
+														{text},
+													</span>
+												</div>
+											))} */}
+											<div
+												class='text-white col-lg-12 text-left'
+												data-aos='fade-up'
+												data-aos-delay='350'>
+												<span className='text-left'>{str},</span>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							<div class='row mt-3'></div>
 						</div>
 					</div>
 					<section class='section' id='products'>
@@ -109,7 +186,7 @@ const CategoryProducts = () => {
 							<div class='row'>
 								<div class='col-lg-12'>
 									<div class='section-heading'>
-										<h2>Our Latest Products</h2>
+										<h2>Our Latest Fabrics</h2>
 										<span>Check out all of our products.</span>
 									</div>
 								</div>
@@ -118,9 +195,9 @@ const CategoryProducts = () => {
 						<div class='container'>
 							<div class='row'>
 								{currentProducts?.map((product, index) => (
-									<div class='col-lg-4' key={index}>
+									<div class='col-lg-3' key={index}>
 										<div class='item'>
-											<div class='thumb'>
+											<div class='thumb' data-aos='fade-up' data-aos-delay='50'>
 												<div class='hover-content'>
 													<ul>
 														<li>
@@ -140,8 +217,8 @@ const CategoryProducts = () => {
 												</div>
 												<img
 													src={product?.image?.url}
-													width={300}
-													height={390}
+													width={200}
+													height={290}
 													alt=''
 												/>
 											</div>

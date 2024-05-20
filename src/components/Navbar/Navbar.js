@@ -247,7 +247,19 @@ const Navbar = () => {
 														</div>
 														<div className='text-black'>
 															<p>
-																<Link to={'checkout'}>Checkout</Link>
+																<Link
+																	to={
+																		cartDetails?.line_items.length > 0 &&
+																		cartDetails?.hosted_checkout_url
+																	}
+																	style={{
+																		color:
+																			cartDetails?.line_items.length > 0
+																				? '#636363'
+																				: 'grey',
+																	}}>
+																	Checkout
+																</Link>
 															</p>
 														</div>
 													</li>
